@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.monsterwolf;
 
 
-/**
- *
- * @author Vagner
- */
+
 public class Cadastro extends javax.swing.JFrame {
     /**
      * Creates new form TelaInicial
@@ -236,6 +229,9 @@ public class Cadastro extends javax.swing.JFrame {
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.inserirCliente(cliente);
         clienteDAO.consultarTudo();
+        Loja loja = new Loja();
+        loja.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
     /**

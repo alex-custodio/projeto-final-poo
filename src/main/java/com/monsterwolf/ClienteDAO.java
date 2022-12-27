@@ -1,6 +1,7 @@
 package com.monsterwolf;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
         
 public class ClienteDAO {
     Connection conexao;
@@ -11,7 +12,7 @@ public class ClienteDAO {
     
     public void inserirCliente(Cliente cl){
         try{
-            PreparedStatement ps = conexao.prepareStatement("insert into  Cliente (id, nome, cpf, email, senha) values ( ?, ?, ?, ?)");
+            PreparedStatement ps = conexao.prepareStatement("insert into  Cliente (id, nome, cpf, email, senha) values ( ?, ?, ?, ?, ?)");
             ps.setInt(1, cl.getId());
             ps.setString(2, cl.getNome());
             ps.setString(3, cl.getCpf());
@@ -34,7 +35,7 @@ public class ClienteDAO {
             while(rst.next()){
                 String n = rst.getString("nome");
                 int i = rst.getInt("id");
-                System.out.println("Dados do banco: "+n+" "+i);
+                JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso\nDados do banco:\nid: " + i + "\nNome: " + n);
             }
         } catch (SQLException ex) {
             System.out.println("Erro na consulta de pessoa: "+ex);

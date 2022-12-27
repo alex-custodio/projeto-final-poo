@@ -4,10 +4,7 @@
  */
 package com.monsterwolf;
 
-/**
- *
- * @author Vagner
- */
+
 public class Menu extends javax.swing.JFrame {
 
     /**
