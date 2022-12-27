@@ -120,7 +120,7 @@
             <Component class="javax.swing.JLabel" name="imagemWhey">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/monsterwolf/download.png"/>
+                  <Image iconType="1" name="https://raw.githubusercontent.com/alex-custodio/projeto-final-poo/main/src/main/java/com/monsterwolf/pagamentos/pix-whey.png"/>
                 </Property>
               </Properties>
             </Component>

@@ -465,7 +465,9 @@ public class Loja extends javax.swing.JFrame {
     }//GEN-LAST:event_comprarPastaActionPerformed
 
     private void comprarWheyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarWheyActionPerformed
-        // TODO add your handling code here:
+        ComprarWhey comprarWhey = new ComprarWhey();
+        comprarWhey.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_comprarWheyActionPerformed
 
     private void comprarCreatinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarCreatinaActionPerformed
