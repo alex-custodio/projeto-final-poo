@@ -4,12 +4,12 @@
  */
 package com.monsterwolf;
 
+
 /**
  *
  * @author Vagner
  */
 public class Cadastro extends javax.swing.JFrame {
-
     /**
      * Creates new form TelaInicial
      */
@@ -27,155 +27,139 @@ public class Cadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         Tela1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        panelCadastro = new javax.swing.JPanel();
+        nomeField = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
+        senhaField = new javax.swing.JTextField();
+        cpfField = new javax.swing.JFormattedTextField();
+        nomeLabel = new javax.swing.JLabel();
+        senhaLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        cpfLabel = new javax.swing.JLabel();
+        cadastroButton = new javax.swing.JButton();
+        logo = new javax.swing.JLabel();
+        imagem = new javax.swing.JLabel();
+        cadastroLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Tela1.setBackground(new java.awt.Color(32, 27, 44));
 
-        jPanel2.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel2.setForeground(new java.awt.Color(102, 0, 102));
+        panelCadastro.setBackground(new java.awt.Color(47, 40, 65));
+        panelCadastro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelCadastro.setForeground(new java.awt.Color(102, 0, 102));
 
-        jTextField1.setBackground(new java.awt.Color(81, 72, 105));
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setToolTipText("Digite seu nome");
-        jTextField1.setBorder(null);
-        jTextField1.setMargin(new java.awt.Insets(2, 6, 2, 2));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        nomeField.setBackground(new java.awt.Color(81, 72, 105));
+        nomeField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        nomeField.setForeground(new java.awt.Color(255, 255, 255));
+        nomeField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        nomeField.setToolTipText("Digite seu nome");
+        nomeField.setBorder(null);
+        nomeField.setMargin(new java.awt.Insets(2, 6, 2, 2));
 
-        jTextField2.setBackground(new java.awt.Color(81, 72, 105));
-        jTextField2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setToolTipText("Digite seu email");
-        jTextField2.setBorder(null);
-        jTextField2.setMargin(new java.awt.Insets(2, 6, 2, 2));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
+        emailField.setBackground(new java.awt.Color(81, 72, 105));
+        emailField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        emailField.setForeground(new java.awt.Color(255, 255, 255));
+        emailField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        emailField.setToolTipText("Digite seu email");
+        emailField.setBorder(null);
+        emailField.setMargin(new java.awt.Insets(2, 6, 2, 2));
 
-        jTextField3.setBackground(new java.awt.Color(81, 72, 105));
-        jTextField3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setToolTipText("Digite sua senha");
-        jTextField3.setBorder(null);
-        jTextField3.setMargin(new java.awt.Insets(2, 6, 2, 2));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
+        senhaField.setBackground(new java.awt.Color(81, 72, 105));
+        senhaField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        senhaField.setForeground(new java.awt.Color(255, 255, 255));
+        senhaField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        senhaField.setToolTipText("Digite sua senha");
+        senhaField.setBorder(null);
+        senhaField.setMargin(new java.awt.Insets(2, 6, 2, 2));
 
-        jFormattedTextField1.setBackground(new java.awt.Color(81, 72, 105));
-        jFormattedTextField1.setBorder(null);
-        jFormattedTextField1.setForeground(java.awt.Color.white);
+        cpfField.setBackground(new java.awt.Color(81, 72, 105));
+        cpfField.setBorder(null);
+        cpfField.setForeground(java.awt.Color.white);
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            cpfField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField1.setToolTipText("Digite seu CPF");
-        jFormattedTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jFormattedTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+        cpfField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cpfField.setToolTipText("Digite seu CPF");
+        cpfField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cpfField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+
+        nomeLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        nomeLabel.setForeground(java.awt.Color.white);
+        nomeLabel.setText("Nome:");
+
+        senhaLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        senhaLabel.setForeground(java.awt.Color.white);
+        senhaLabel.setText("Senha:");
+
+        emailLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        emailLabel.setForeground(java.awt.Color.white);
+        emailLabel.setText("Email:");
+
+        cpfLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        cpfLabel.setForeground(java.awt.Color.white);
+        cpfLabel.setText("CPF:");
+
+        cadastroButton.setBackground(new java.awt.Color(119, 255, 192));
+        cadastroButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        cadastroButton.setText("Cadastrar");
+        cadastroButton.setBorder(null);
+        cadastroButton.setBorderPainted(false);
+        cadastroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ActionPerformed(evt);
+                cadastroButtonActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("Nome:");
-
-        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel2.setForeground(java.awt.Color.white);
-        jLabel2.setText("Senha:");
-
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel3.setForeground(java.awt.Color.white);
-        jLabel3.setText("Email:");
-
-        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel4.setForeground(java.awt.Color.white);
-        jLabel4.setText("CPF:");
-
-        jButton1.setBackground(new java.awt.Color(119, 255, 192));
-        jButton1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton1.setText("Cadastrar");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelCadastroLayout = new javax.swing.GroupLayout(panelCadastro);
+        panelCadastro.setLayout(panelCadastroLayout);
+        panelCadastroLayout.setHorizontalGroup(
+            panelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastroLayout.createSequentialGroup()
                 .addContainerGap(51, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
-                    .addComponent(jTextField1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField1)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(emailField, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
+                    .addComponent(nomeField)
+                    .addComponent(nomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfField)
+                    .addComponent(senhaField, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
+                    .addComponent(cadastroButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senhaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        panelCadastroLayout.setVerticalGroup(
+            panelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCadastroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(nomeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nomeField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
+                .addComponent(emailLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(senhaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(senhaField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(cpfLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cpfField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cadastroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(101, 241, 215));
-        jLabel7.setText("Monster Wolf");
+        logo.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        logo.setForeground(new java.awt.Color(101, 241, 215));
+        logo.setText("Monster Wolf");
 
-        jLabel5.setIcon(new javax.swing.JLabel() {
+        imagem.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
                 try {
                     return new javax.swing.ImageIcon(
@@ -186,14 +170,12 @@ public class Cadastro extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
-        jLabel5.setLabelFor(Tela1);
-        jLabel5.setToolTipText("");
+        imagem.setLabelFor(Tela1);
+        imagem.setToolTipText("");
 
-        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(119, 255, 192));
-        jLabel8.setText("Cadastre o seu usuário");
-
-        jLabel6.setText("jLabel6");
+        cadastroLabel.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        cadastroLabel.setForeground(new java.awt.Color(119, 255, 192));
+        cadastroLabel.setText("Cadastre o seu usuário");
 
         javax.swing.GroupLayout Tela1Layout = new javax.swing.GroupLayout(Tela1);
         Tela1.setLayout(Tela1Layout);
@@ -204,33 +186,30 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Tela1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
-                        .addComponent(jLabel5))
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(imagem))
+                    .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tela1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(99, 99, 99))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tela1Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cadastroLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(139, 139, 139))))
         );
         Tela1Layout.setVerticalGroup(
             Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Tela1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addGap(62, 62, 62)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo)
+                .addGap(84, 84, 84)
+                .addComponent(imagem, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tela1Layout.createSequentialGroup()
                 .addContainerGap(42, Short.MAX_VALUE)
-                .addComponent(jLabel8)
+                .addComponent(cadastroLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
 
@@ -248,21 +227,16 @@ public class Cadastro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+    private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
+        String nome = nomeField.getText();
+        String email = emailField.getText();
+        String senha = senhaField.getText();
+        String cpf = cpfField.getText();
+        Cliente cliente = new Cliente(nome,cpf,email,senha);
+        ClienteDAO clienteDAO = new ClienteDAO();
+        clienteDAO.inserirCliente(cliente);
+        clienteDAO.consultarTudo();
+    }//GEN-LAST:event_cadastroButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,19 +276,18 @@ public class Cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Tela1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton cadastroButton;
+    private javax.swing.JLabel cadastroLabel;
+    private javax.swing.JFormattedTextField cpfField;
+    private javax.swing.JLabel cpfLabel;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JLabel imagem;
+    private javax.swing.JLabel logo;
+    private javax.swing.JTextField nomeField;
+    private javax.swing.JLabel nomeLabel;
+    private javax.swing.JPanel panelCadastro;
+    private javax.swing.JTextField senhaField;
+    private javax.swing.JLabel senhaLabel;
     // End of variables declaration//GEN-END:variables
 }

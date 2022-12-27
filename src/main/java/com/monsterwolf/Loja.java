@@ -26,295 +26,342 @@ public class Loja extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLayeredPane1 = new javax.swing.JLayeredPane();
         Tela1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        panelWhey = new javax.swing.JPanel();
+        imagemWhey = new javax.swing.JLabel();
+        valorWhey = new javax.swing.JLabel();
+        nomeWhey = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        pedidosButton = new javax.swing.JButton();
+        panelCreatina = new javax.swing.JPanel();
+        imagemCreatina = new javax.swing.JLabel();
+        valorCreatina = new javax.swing.JLabel();
+        nomeCreatina = new javax.swing.JLabel();
+        panelPasta = new javax.swing.JPanel();
+        imagemPasta = new javax.swing.JLabel();
+        valorPasta = new javax.swing.JLabel();
+        nomePasta = new javax.swing.JLabel();
+        panelDemo1 = new javax.swing.JPanel();
+        panelDemo2 = new javax.swing.JPanel();
+        panelDemo3 = new javax.swing.JPanel();
+        comprarPasta = new javax.swing.JButton();
+        comprarWhey = new javax.swing.JButton();
+        comprarCreatina = new javax.swing.JButton();
+        detalhesPasta = new javax.swing.JButton();
+        detalhesWhey = new javax.swing.JButton();
+        detalhesCreatina = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Tela1.setBackground(new java.awt.Color(32, 27, 44));
 
-        jPanel2.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel2.setForeground(new java.awt.Color(102, 0, 102));
+        panelWhey.setBackground(new java.awt.Color(47, 40, 65));
+        panelWhey.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelWhey.setForeground(new java.awt.Color(102, 0, 102));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/monsterwolf/produto-selo-topo-new-v3.png"))); // NOI18N
+        imagemWhey.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("https://raw.githubusercontent.com/alex-custodio/projeto-final-poo/main/src/main/java/com/monsterwolf/whey-protein.png")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
 
-        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(119, 255, 192));
-        jLabel5.setText("R$99,00");
+        valorWhey.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        valorWhey.setForeground(new java.awt.Color(119, 255, 192));
+        valorWhey.setText("R$99,00");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(26, 26, 26))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(70, Short.MAX_VALUE)
-                    .addComponent(jLabel5)
-                    .addGap(56, 56, 56)))
+        nomeWhey.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        nomeWhey.setForeground(new java.awt.Color(255, 204, 102));
+        nomeWhey.setText("Whey Protein");
+
+        javax.swing.GroupLayout panelWheyLayout = new javax.swing.GroupLayout(panelWhey);
+        panelWhey.setLayout(panelWheyLayout);
+        panelWheyLayout.setHorizontalGroup(
+            panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelWheyLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(valorWhey)
+                .addGap(61, 61, 61))
+            .addGroup(panelWheyLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nomeWhey)
+                    .addComponent(imagemWhey))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(244, Short.MAX_VALUE)
-                    .addComponent(jLabel5)
-                    .addContainerGap()))
+        panelWheyLayout.setVerticalGroup(
+            panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelWheyLayout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addComponent(nomeWhey)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(imagemWhey)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valorWhey))
         );
 
-        jPanel3.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel3.setForeground(new java.awt.Color(102, 0, 102));
+        header.setBackground(new java.awt.Color(47, 40, 65));
+        header.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        header.setForeground(new java.awt.Color(102, 0, 102));
 
-        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(101, 241, 215));
-        jLabel7.setText("Monster Wolf");
+        logo.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        logo.setForeground(new java.awt.Color(101, 241, 215));
+        logo.setText("Monster Wolf");
 
-        jButton3.setBackground(new java.awt.Color(255, 102, 102));
-        jButton3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton3.setText("Pedidos");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        pedidosButton.setBackground(new java.awt.Color(255, 102, 102));
+        pedidosButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        pedidosButton.setText("Pedidos");
+        pedidosButton.setBorder(null);
+        pedidosButton.setBorderPainted(false);
+        pedidosButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                pedidosButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pedidosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)))
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(headerLayout.createSequentialGroup()
+                        .addGap(0, 8, Short.MAX_VALUE)
+                        .addComponent(pedidosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(headerLayout.createSequentialGroup()
+                        .addComponent(logo)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        jPanel4.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel4.setForeground(new java.awt.Color(102, 0, 102));
+        panelCreatina.setBackground(new java.awt.Color(47, 40, 65));
+        panelCreatina.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelCreatina.setForeground(new java.awt.Color(102, 0, 102));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/monsterwolf/produto-selo-topo-new-v3.png"))); // NOI18N
+        imagemCreatina.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("https://raw.githubusercontent.com/alex-custodio/projeto-final-poo/main/src/main/java/com/monsterwolf/creatina.png")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
 
-        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(119, 255, 192));
-        jLabel2.setText("R$99,00");
+        valorCreatina.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        valorCreatina.setForeground(new java.awt.Color(119, 255, 192));
+        valorCreatina.setText("R$45,00");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        nomeCreatina.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        nomeCreatina.setForeground(new java.awt.Color(255, 204, 102));
+        nomeCreatina.setText("Creatina");
+
+        javax.swing.GroupLayout panelCreatinaLayout = new javax.swing.GroupLayout(panelCreatina);
+        panelCreatina.setLayout(panelCreatinaLayout);
+        panelCreatinaLayout.setHorizontalGroup(
+            panelCreatinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCreatinaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(30, 30, 30))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(66, 66, 66))))
+                .addGroup(panelCreatinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
+                        .addComponent(imagemCreatina)
+                        .addGap(34, 34, 34))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
+                        .addComponent(valorCreatina)
+                        .addGap(72, 72, 72))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
+                        .addComponent(nomeCreatina)
+                        .addGap(68, 68, 68))))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(jLabel2))
+        panelCreatinaLayout.setVerticalGroup(
+            panelCreatinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCreatinaLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(nomeCreatina)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imagemCreatina)
+                .addGap(33, 33, 33)
+                .addComponent(valorCreatina)
+                .addContainerGap())
         );
 
-        jPanel5.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel5.setForeground(new java.awt.Color(102, 0, 102));
+        panelPasta.setBackground(new java.awt.Color(47, 40, 65));
+        panelPasta.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelPasta.setForeground(new java.awt.Color(102, 0, 102));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/monsterwolf/produto-selo-topo-new-v3.png"))); // NOI18N
+        imagemPasta.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("https://raw.githubusercontent.com/alex-custodio/projeto-final-poo/main/src/main/java/com/monsterwolf/pasta-amendoim.png")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
 
-        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(119, 255, 192));
-        jLabel6.setText("R$99,00");
+        valorPasta.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        valorPasta.setForeground(new java.awt.Color(119, 255, 192));
+        valorPasta.setText("R$25,00");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(19, 19, 19))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(48, 48, 48))))
+        nomePasta.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        nomePasta.setForeground(new java.awt.Color(255, 204, 102));
+        nomePasta.setText("Pasta de Amendoim");
+
+        javax.swing.GroupLayout panelPastaLayout = new javax.swing.GroupLayout(panelPasta);
+        panelPasta.setLayout(panelPastaLayout);
+        panelPastaLayout.setHorizontalGroup(
+            panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPastaLayout.createSequentialGroup()
+                .addContainerGap(9, Short.MAX_VALUE)
+                .addGroup(panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
+                        .addComponent(imagemPasta)
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
+                        .addComponent(valorPasta)
+                        .addGap(65, 65, 65))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
+                        .addComponent(nomePasta)
+                        .addContainerGap())))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        panelPastaLayout.setVerticalGroup(
+            panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPastaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(nomePasta)
+                .addGap(18, 18, 18)
+                .addComponent(imagemPasta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6))
+                .addComponent(valorPasta))
         );
 
-        jPanel6.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel6.setForeground(new java.awt.Color(102, 0, 102));
+        panelDemo1.setBackground(new java.awt.Color(47, 40, 65));
+        panelDemo1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelDemo1.setForeground(new java.awt.Color(102, 0, 102));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelDemo1Layout = new javax.swing.GroupLayout(panelDemo1);
+        panelDemo1.setLayout(panelDemo1Layout);
+        panelDemo1Layout.setHorizontalGroup(
+            panelDemo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 248, Short.MAX_VALUE)
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelDemo1Layout.setVerticalGroup(
+            panelDemo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 41, Short.MAX_VALUE)
         );
 
-        jPanel7.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel7.setForeground(new java.awt.Color(102, 0, 102));
+        panelDemo2.setBackground(new java.awt.Color(47, 40, 65));
+        panelDemo2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelDemo2.setForeground(new java.awt.Color(102, 0, 102));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelDemo2Layout = new javax.swing.GroupLayout(panelDemo2);
+        panelDemo2.setLayout(panelDemo2Layout);
+        panelDemo2Layout.setHorizontalGroup(
+            panelDemo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelDemo2Layout.setVerticalGroup(
+            panelDemo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel8.setBackground(new java.awt.Color(47, 40, 65));
-        jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel8.setForeground(new java.awt.Color(102, 0, 102));
+        panelDemo3.setBackground(new java.awt.Color(47, 40, 65));
+        panelDemo3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        panelDemo3.setForeground(new java.awt.Color(102, 0, 102));
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelDemo3Layout = new javax.swing.GroupLayout(panelDemo3);
+        panelDemo3.setLayout(panelDemo3Layout);
+        panelDemo3Layout.setHorizontalGroup(
+            panelDemo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 220, Short.MAX_VALUE)
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelDemo3Layout.setVerticalGroup(
+            panelDemo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jButton4.setBackground(new java.awt.Color(119, 255, 192));
-        jButton4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton4.setText("Comprar");
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        comprarPasta.setBackground(new java.awt.Color(119, 255, 192));
+        comprarPasta.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        comprarPasta.setText("Comprar");
+        comprarPasta.setBorder(null);
+        comprarPasta.setBorderPainted(false);
+        comprarPasta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                comprarPastaActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(119, 255, 192));
-        jButton5.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton5.setText("Comprar");
-        jButton5.setBorder(null);
-        jButton5.setBorderPainted(false);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        comprarWhey.setBackground(new java.awt.Color(119, 255, 192));
+        comprarWhey.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        comprarWhey.setText("Comprar");
+        comprarWhey.setBorder(null);
+        comprarWhey.setBorderPainted(false);
+        comprarWhey.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                comprarWheyActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(119, 255, 192));
-        jButton6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton6.setText("Comprar");
-        jButton6.setBorder(null);
-        jButton6.setBorderPainted(false);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        comprarCreatina.setBackground(new java.awt.Color(119, 255, 192));
+        comprarCreatina.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        comprarCreatina.setText("Comprar");
+        comprarCreatina.setBorder(null);
+        comprarCreatina.setBorderPainted(false);
+        comprarCreatina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                comprarCreatinaActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(209, 217, 228));
-        jButton7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton7.setText("Detalhes");
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        detalhesPasta.setBackground(new java.awt.Color(209, 217, 228));
+        detalhesPasta.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        detalhesPasta.setText("Detalhes");
+        detalhesPasta.setBorder(null);
+        detalhesPasta.setBorderPainted(false);
+        detalhesPasta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                detalhesPastaActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(209, 217, 228));
-        jButton8.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton8.setText("Detalhes");
-        jButton8.setBorder(null);
-        jButton8.setBorderPainted(false);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        detalhesWhey.setBackground(new java.awt.Color(209, 217, 228));
+        detalhesWhey.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        detalhesWhey.setText("Detalhes");
+        detalhesWhey.setBorder(null);
+        detalhesWhey.setBorderPainted(false);
+        detalhesWhey.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                detalhesWheyActionPerformed(evt);
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(209, 217, 228));
-        jButton9.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton9.setText("Detalhes");
-        jButton9.setBorder(null);
-        jButton9.setBorderPainted(false);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        detalhesCreatina.setBackground(new java.awt.Color(209, 217, 228));
+        detalhesCreatina.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        detalhesCreatina.setText("Detalhes");
+        detalhesCreatina.setBorder(null);
+        detalhesCreatina.setBorderPainted(false);
+        detalhesCreatina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                detalhesCreatinaActionPerformed(evt);
             }
         });
 
@@ -322,68 +369,63 @@ public class Loja extends javax.swing.JFrame {
         Tela1.setLayout(Tela1Layout);
         Tela1Layout.setHorizontalGroup(
             Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(Tela1Layout.createSequentialGroup()
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tela1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelWhey, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(90, 90, 90))
                     .addGroup(Tela1Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelDemo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(Tela1Layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(comprarWhey, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(detalhesWhey, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(75, 75, 75)))
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(Tela1Layout.createSequentialGroup()
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(comprarCreatina, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(detalhesCreatina, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelCreatina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelDemo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Tela1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Tela1Layout.createSequentialGroup()
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(23, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tela1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(comprarPasta, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(detalhesPasta, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addComponent(panelDemo3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelPasta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         Tela1Layout.setVerticalGroup(
             Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Tela1Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelWhey, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelCreatina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelPasta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comprarWhey, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(34, 34, 34)
+                        .addComponent(comprarPasta, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(comprarCreatina, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(detalhesPasta, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(detalhesCreatina, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(detalhesWhey, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(panelDemo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelDemo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelDemo3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -400,33 +442,33 @@ public class Loja extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void pedidosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedidosButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_pedidosButtonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void comprarPastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarPastaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_comprarPastaActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void comprarWheyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarWheyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_comprarWheyActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void comprarCreatinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarCreatinaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_comprarCreatinaActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void detalhesPastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detalhesPastaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_detalhesPastaActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void detalhesWheyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detalhesWheyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_detalhesWheyActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void detalhesCreatinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detalhesCreatinaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_detalhesCreatinaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -480,27 +522,29 @@ public class Loja extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Tela1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
+    private javax.swing.JButton comprarCreatina;
+    private javax.swing.JButton comprarPasta;
+    private javax.swing.JButton comprarWhey;
+    private javax.swing.JButton detalhesCreatina;
+    private javax.swing.JButton detalhesPasta;
+    private javax.swing.JButton detalhesWhey;
+    private javax.swing.JPanel header;
+    private javax.swing.JLabel imagemCreatina;
+    private javax.swing.JLabel imagemPasta;
+    private javax.swing.JLabel imagemWhey;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel nomeCreatina;
+    private javax.swing.JLabel nomePasta;
+    private javax.swing.JLabel nomeWhey;
+    private javax.swing.JPanel panelCreatina;
+    private javax.swing.JPanel panelDemo1;
+    private javax.swing.JPanel panelDemo2;
+    private javax.swing.JPanel panelDemo3;
+    private javax.swing.JPanel panelPasta;
+    private javax.swing.JPanel panelWhey;
+    private javax.swing.JButton pedidosButton;
+    private javax.swing.JLabel valorCreatina;
+    private javax.swing.JLabel valorPasta;
+    private javax.swing.JLabel valorWhey;
     // End of variables declaration//GEN-END:variables
 }
