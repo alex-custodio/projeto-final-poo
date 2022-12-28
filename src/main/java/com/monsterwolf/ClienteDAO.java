@@ -42,6 +42,7 @@ public class ClienteDAO {
             System.out.println("Erro na consulta de pessoa: "+ex);
         }
     }
+    // Verifica se existe um cliente com determinado email e senha correspondente.
     public void verificarLogin(Login telaAtual, String email, String senha){
         try {
             PreparedStatement ps = conexao.prepareStatement("select * from cliente where email= ? and senha= ?");

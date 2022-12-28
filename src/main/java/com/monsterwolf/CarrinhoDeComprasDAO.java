@@ -4,6 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+// Aqui está a classeDAO referente a tabela de carrinho de compras no mysql, é aqui que serão feitas todas as comunicações
+// com o banco de dados do carrinho de compras, que é a parte mais completa do projeto
 public class CarrinhoDeComprasDAO {
     private static int id = 0;
     static ArrayList<Produto> lista_desejos;
@@ -46,7 +48,7 @@ public class CarrinhoDeComprasDAO {
             System.out.println("Erro na consulta de: "+ex);
         }
     }
-    
+    //A ideia aqui é gerar um array list baseado nos dados existentes na tabela
     public ArrayList<Produto> getListaDesejos(){
         lista_desejos = new ArrayList();
         try {
@@ -62,6 +64,8 @@ public class CarrinhoDeComprasDAO {
         }
         return lista_desejos;
     }
+    //Quando o cliente comprar todos os itens do carrinho, é interessante que a lista se esvazie, por isso esse método foi criado
+    // garantindo que na classe Carrinho seja possível esvaziar essa lista.
     public void setListaDesejos(ArrayList l){
         this.lista_desejos = l;
     }
