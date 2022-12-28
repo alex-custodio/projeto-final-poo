@@ -22,3 +22,4 @@ nome_produto varchar(50),
 valor varchar(10), 
 quantidade integer
 );
+

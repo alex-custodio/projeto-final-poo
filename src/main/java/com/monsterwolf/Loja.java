@@ -533,6 +533,7 @@ public class Loja extends javax.swing.JFrame {
 
     private void carrinhoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoButtonActionPerformed
         new Carrinho().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_carrinhoButtonActionPerformed
 
     private void comprarPastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarPastaActionPerformed

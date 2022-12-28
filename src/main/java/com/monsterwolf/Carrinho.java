@@ -24,21 +24,56 @@ public class Carrinho extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        produtoField = new javax.swing.JTextField();
+        produtoLabel = new javax.swing.JLabel();
+        precoField = new javax.swing.JTextField();
+        precoLabel = new javax.swing.JLabel();
         Tela1 = new javax.swing.JPanel();
         panelButtons = new javax.swing.JPanel();
         apagarButton = new javax.swing.JButton();
         editarButton = new javax.swing.JButton();
-        produtoField = new javax.swing.JTextField();
         quantidadeLabel = new javax.swing.JLabel();
         quantidadeField = new javax.swing.JTextField();
-        produtoLabel = new javax.swing.JLabel();
-        precoLabel = new javax.swing.JLabel();
-        precoField = new javax.swing.JTextField();
         indexLabel = new javax.swing.JLabel();
+        compraButton = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabela = new javax.swing.JTable();
         voltarButton = new javax.swing.JButton();
+
+        produtoField.setBackground(new java.awt.Color(81, 72, 105));
+        produtoField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        produtoField.setForeground(new java.awt.Color(255, 255, 255));
+        produtoField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        produtoField.setToolTipText("Digite sua senha");
+        produtoField.setBorder(null);
+        produtoField.setMargin(new java.awt.Insets(2, 6, 2, 2));
+        produtoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                produtoFieldActionPerformed(evt);
+            }
+        });
+
+        produtoLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        produtoLabel.setForeground(java.awt.Color.white);
+        produtoLabel.setText("Produto:");
+
+        precoField.setBackground(new java.awt.Color(81, 72, 105));
+        precoField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        precoField.setForeground(new java.awt.Color(255, 255, 255));
+        precoField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        precoField.setToolTipText("Digite sua senha");
+        precoField.setBorder(null);
+        precoField.setMargin(new java.awt.Insets(2, 6, 2, 2));
+        precoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precoFieldActionPerformed(evt);
+            }
+        });
+
+        precoLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        precoLabel.setForeground(java.awt.Color.white);
+        precoLabel.setText("Preço:");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -75,19 +110,6 @@ public class Carrinho extends javax.swing.JFrame {
             }
         });
 
-        produtoField.setBackground(new java.awt.Color(81, 72, 105));
-        produtoField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        produtoField.setForeground(new java.awt.Color(255, 255, 255));
-        produtoField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        produtoField.setToolTipText("Digite sua senha");
-        produtoField.setBorder(null);
-        produtoField.setMargin(new java.awt.Insets(2, 6, 2, 2));
-        produtoField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                produtoFieldActionPerformed(evt);
-            }
-        });
-
         quantidadeLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         quantidadeLabel.setForeground(java.awt.Color.white);
         quantidadeLabel.setText("Quantidade:");
@@ -105,30 +127,20 @@ public class Carrinho extends javax.swing.JFrame {
             }
         });
 
-        produtoLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        produtoLabel.setForeground(java.awt.Color.white);
-        produtoLabel.setText("Produto:");
-
-        precoLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        precoLabel.setForeground(java.awt.Color.white);
-        precoLabel.setText("Preço:");
-
-        precoField.setBackground(new java.awt.Color(81, 72, 105));
-        precoField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        precoField.setForeground(new java.awt.Color(255, 255, 255));
-        precoField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        precoField.setToolTipText("Digite sua senha");
-        precoField.setBorder(null);
-        precoField.setMargin(new java.awt.Insets(2, 6, 2, 2));
-        precoField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                precoFieldActionPerformed(evt);
-            }
-        });
-
         indexLabel.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         indexLabel.setForeground(java.awt.Color.white);
         indexLabel.setText("0");
+
+        compraButton.setBackground(new java.awt.Color(119, 255, 192));
+        compraButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        compraButton.setText("Confirmar Compra");
+        compraButton.setBorder(null);
+        compraButton.setBorderPainted(false);
+        compraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                compraButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelButtonsLayout = new javax.swing.GroupLayout(panelButtons);
         panelButtons.setLayout(panelButtonsLayout);
@@ -136,48 +148,36 @@ public class Carrinho extends javax.swing.JFrame {
             panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelButtonsLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(precoField, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quantidadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(produtoField, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(quantidadeLabel)
-                    .addComponent(precoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(panelButtonsLayout.createSequentialGroup()
-                            .addComponent(produtoLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(indexLabel))
-                        .addGroup(panelButtonsLayout.createSequentialGroup()
-                            .addComponent(editarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(42, 42, 42)
-                            .addComponent(apagarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(indexLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelButtonsLayout.createSequentialGroup()
+                        .addComponent(editarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(apagarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(quantidadeField))
                 .addContainerGap(22, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelButtonsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(compraButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84))
         );
         panelButtonsLayout.setVerticalGroup(
             panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelButtonsLayout.createSequentialGroup()
-                .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelButtonsLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(produtoLabel))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelButtonsLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(indexLabel)))
-                .addGap(18, 18, 18)
-                .addComponent(produtoField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(precoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(precoField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(27, 27, 27)
+                .addComponent(indexLabel)
+                .addGap(14, 14, 14)
                 .addComponent(quantidadeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(quantidadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(panelButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(apagarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
+                    .addComponent(editarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(apagarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(compraButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
 
         logo.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -232,14 +232,13 @@ public class Carrinho extends javax.swing.JFrame {
             Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Tela1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(Tela1Layout.createSequentialGroup()
-                        .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(logo)
-                            .addComponent(voltarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(logo)
+                    .addComponent(voltarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
+                    .addComponent(panelButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -265,23 +264,16 @@ public class Carrinho extends javax.swing.JFrame {
     }//GEN-LAST:event_apagarButtonActionPerformed
 
     private void editarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarButtonActionPerformed
+
         Produto pd = new Produto(produtoField.getText(), "", Integer.parseInt(quantidadeField.getText()), precoField.getText());
         int id_selecionado = Integer.parseInt(indexLabel.getText());
         objeto.editarProduto(pd, id_selecionado);
         new Carrinho().setVisible(true);
     }//GEN-LAST:event_editarButtonActionPerformed
 
-    private void produtoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_produtoFieldActionPerformed
-
     private void quantidadeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantidadeFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_quantidadeFieldActionPerformed
-
-    private void precoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_precoFieldActionPerformed
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
         Loja loja = new Loja();
@@ -291,14 +283,13 @@ public class Carrinho extends javax.swing.JFrame {
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         DefaultTableModel dtm = (DefaultTableModel) tabela.getModel();
-
         ArrayList<Produto> lista_desejos = objeto.getListaDesejos();
         for (Produto produto : lista_desejos) {
             dtm.addRow(new Object[]{
-                lista_desejos.indexOf(produto), 
+                produto.getId(), 
                 produto.getNome(),
                 produto.getValor(),
-                produto.getQuantidade(),
+                produto.getQuantidade()
             });
         }
     }//GEN-LAST:event_formComponentShown
@@ -316,6 +307,27 @@ public class Carrinho extends javax.swing.JFrame {
         String quantidadeTexto = modeloTabela.getValueAt(id, 3).toString();
         quantidadeField.setText(quantidadeTexto);
     }//GEN-LAST:event_tabelaMouseClicked
+
+    private void produtoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_produtoFieldActionPerformed
+
+    private void precoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precoFieldActionPerformed
+
+    private void compraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compraButtonActionPerformed
+        ArrayList<Produto> lista_desejos = objeto.getListaDesejos();
+        CarrinhoDeComprasDAO c = new CarrinhoDeComprasDAO();
+        VendasDAO venda = new VendasDAO();
+        for (Produto produto: lista_desejos){
+            venda.inserirVenda(produto);
+            c.apagarProduto(produto.getId());
+        }
+        Carrinho carrinho = new Carrinho();
+        carrinho.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_compraButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -370,6 +382,7 @@ public class Carrinho extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Tela1;
     private javax.swing.JButton apagarButton;
+    private javax.swing.JButton compraButton;
     private javax.swing.JButton editarButton;
     private javax.swing.JLabel indexLabel;
     private javax.swing.JScrollPane jScrollPane1;

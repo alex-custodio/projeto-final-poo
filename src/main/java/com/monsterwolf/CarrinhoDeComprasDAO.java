@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class CarrinhoDeComprasDAO {
     private static int id = 0;
-    private static ArrayList<Produto> lista_desejos = new ArrayList();
+    static ArrayList<Produto> lista_desejos;
     Connection conexao;
 
     public CarrinhoDeComprasDAO(){
@@ -16,14 +16,12 @@ public class CarrinhoDeComprasDAO {
     public void inserirProduto(Produto produto){
         try{
             id++;
-            PreparedStatement ps = conexao.prepareStatement("insert into carrinho (id, produto, preco, quantidade) values (?, ?, ?, ?)");
-            ps.setInt(1, this.id);
-            ps.setString(2, produto.getNome());
-            ps.setString(3, produto.getValor());
-            ps.setInt(4, produto.getQuantidade());
+            PreparedStatement ps = conexao.prepareStatement("insert into carrinho (produto, preco, quantidade) values (?, ?, ?)");
+            ps.setString(1, produto.getNome());
+            ps.setString(2, produto.getValor());
+            ps.setInt(3, produto.getQuantidade());
             ps.executeUpdate();            
-            System.out.println("\n Venda feita com sucesso");
-            lista_desejos.add(produto); 
+            System.out.println("\nsucesso");
             JOptionPane.showMessageDialog(null, "Produto adicionado ao seu carrinho de compras!");
         }catch(Exception e){
           System.out.println("Erro: "+e);
@@ -50,18 +48,33 @@ public class CarrinhoDeComprasDAO {
     }
     
     public ArrayList<Produto> getListaDesejos(){
+        lista_desejos = new ArrayList();
+        try {
+            PreparedStatement sttmt = conexao.prepareStatement("select * from carrinho");
+            ResultSet consulta = sttmt.executeQuery();
+            while (consulta.next()) {
+                Produto pd = new Produto(consulta.getString("produto"), "", consulta.getInt("quantidade"), consulta.getString("preco"));
+                pd.setId(consulta.getInt("id"));
+                lista_desejos.add(pd);
+            }
+        } catch (Exception e) {
+            System.out.println("Erro: " + e);
+        }
         return lista_desejos;
     }
+    public void setListaDesejos(ArrayList l){
+        this.lista_desejos = l;
+    }
+    
     public void editarProduto(Produto produto, int id){
         try {
             PreparedStatement ps = conexao.prepareStatement("update carrinho set produto = ? , preco = ? , quantidade = ? where id = ?");
             ps.setString(1, produto.getNome());
             ps.setString(2, produto.getValor());
             ps.setInt(3, produto.getQuantidade());
-            ps.setInt(4,this.id);
+            ps.setInt(4, id);
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Atualizado!");
-            lista_desejos.set(id, produto);
         } catch (Exception e) {
             System.out.println("Erro causado por: " + e);
         }
@@ -73,7 +86,7 @@ public class CarrinhoDeComprasDAO {
             ps.setInt(1,id);
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Apagado!");
-            lista_desejos.remove(id);
+            
         }catch(Exception e){
             System.out.println("Erro causado por: " + e);
 

@@ -4,10 +4,10 @@ public class Produto {
     private String nome;
     private int quantidade;
     private String valor;
-    private String descricao; 	 	
+    private String descricao; 
+    private int id;
 
     public Produto(String nome, String descricao, int quantidade, String valor){ 
-        
         this.nome = nome;
         this.descricao = descricao;
         this.quantidade = quantidade;
@@ -42,5 +42,11 @@ public class Produto {
     public void setValor(String valor) {
         this.valor = valor; 
     }
+    public int getId() { 
+        return id; 	
+    } 	
 
+    public void setId(int id) {
+        this.id = id; 
+    }
 }

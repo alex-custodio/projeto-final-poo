@@ -20,7 +20,7 @@ public class VendasDAO {
             ps.setString(3, vd.getValor());
             ps.setInt(4, vd.getQuantidade());
             ps.executeUpdate();            
-            System.out.println("\n Venda feita com sucesso");
+            JOptionPane.showMessageDialog(null, "Vendido!");
                            
         }catch(Exception e){
           System.out.println("Erro: "+e);
