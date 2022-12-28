@@ -53,7 +53,7 @@ public class ClienteDAO {
                 new Loja().setVisible(true);
                 telaAtual.dispose();
             } else {
-                JOptionPane.showMessageDialog(null, "Por favor, digite as informações corretas...");
+                JOptionPane.showMessageDialog(null, "Email ou senha digitado incorretamente");
             }
         } catch (SQLException erro) {
             System.out.println("Erro: " + erro);
