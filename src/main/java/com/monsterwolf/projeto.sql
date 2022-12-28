@@ -11,12 +11,14 @@ senha varchar(30)
 
 create table carrinho (
 id integer primary key auto_increment,
-nome_produto varchar(30),
-valor varchar(6)
+produto varchar(30),
+preco varchar(10),
+quantidade integer
 );
 
 create table vendas (
 id integer primary key auto_increment,
+nome_produto varchar(50),
 valor varchar(10), 
 quantidade integer
 );

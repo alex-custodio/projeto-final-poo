@@ -1,22 +1,19 @@
 package com.monsterwolf;
 
-public class Produto { 	 	
-    private int id; 	
-    private String nome; 	
+public class Produto { 	 
+    private String nome;
+    private int quantidade;
+    private String valor;
     private String descricao; 	 	
 
-    public Produto(int id, String nome, String descricao){ 
-        this.id = id;
+    public Produto(String nome, String descricao, int quantidade, String valor){ 
+        
         this.nome = nome;
-        this.descricao = descricao;   
+        this.descricao = descricao;
+        this.quantidade = quantidade;
+        this.valor = valor;
     } 	
     //Getters e Setters 	
-    public int getId() { 		
-        return id; 	
-    } 	
-    public void setId(int id) { 	
-        this.id= id; 
-    } 	
 
     public String getNome() { 
         return nome; 	
@@ -30,6 +27,20 @@ public class Produto {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao; 
-    } 	 	 
+    } 
+    public int getQuantidade() { 
+        return quantidade; 	
+    } 	
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade; 
+    } 
+    public String getValor() { 
+        return valor; 	
+    } 	
+
+    public void setValor(String valor) {
+        this.valor = valor; 
+    }
 
 }

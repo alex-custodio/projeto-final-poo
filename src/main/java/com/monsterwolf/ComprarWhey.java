@@ -1,5 +1,7 @@
-
 package com.monsterwolf;
+
+import static com.monsterwolf.Loja.whey;
+import javax.swing.JOptionPane;
 
 
 
@@ -24,6 +26,9 @@ public class ComprarWhey extends javax.swing.JFrame {
         valorWhey = new javax.swing.JLabel();
         nomeWhey = new javax.swing.JLabel();
         nomeWhey1 = new javax.swing.JLabel();
+        quantidadeProdutos = new javax.swing.JTextField();
+        labelQuantidade = new javax.swing.JLabel();
+        confirmarButton = new javax.swing.JButton();
         header = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         voltarButton = new javax.swing.JButton();
@@ -60,6 +65,34 @@ public class ComprarWhey extends javax.swing.JFrame {
         nomeWhey1.setForeground(new java.awt.Color(255, 204, 102));
         nomeWhey1.setText("pagar com PIX!");
 
+        quantidadeProdutos.setBackground(new java.awt.Color(81, 72, 105));
+        quantidadeProdutos.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        quantidadeProdutos.setForeground(new java.awt.Color(255, 255, 255));
+        quantidadeProdutos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        quantidadeProdutos.setToolTipText("Digite a quantidade de produtos comprados");
+        quantidadeProdutos.setBorder(null);
+        quantidadeProdutos.setMargin(new java.awt.Insets(2, 6, 2, 2));
+        quantidadeProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quantidadeProdutosActionPerformed(evt);
+            }
+        });
+
+        labelQuantidade.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        labelQuantidade.setForeground(java.awt.Color.white);
+        labelQuantidade.setText("Quantidade:");
+
+        confirmarButton.setBackground(new java.awt.Color(119, 255, 192));
+        confirmarButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        confirmarButton.setText("Confirmar Compra");
+        confirmarButton.setBorder(null);
+        confirmarButton.setBorderPainted(false);
+        confirmarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelWheyLayout = new javax.swing.GroupLayout(panelWhey);
         panelWhey.setLayout(panelWheyLayout);
         panelWheyLayout.setHorizontalGroup(
@@ -67,28 +100,42 @@ public class ComprarWhey extends javax.swing.JFrame {
             .addGroup(panelWheyLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(imagemWhey)
-                .addGap(36, 36, 36)
                 .addGroup(panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeWhey)
-                    .addComponent(valorWhey)
-                    .addComponent(nomeWhey1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelWheyLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nomeWhey)
+                            .addComponent(valorWhey)
+                            .addComponent(nomeWhey1))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWheyLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(confirmarButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(quantidadeProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(71, 71, 71))))
         );
         panelWheyLayout.setVerticalGroup(
             panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelWheyLayout.createSequentialGroup()
-                .addGroup(panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelWheyLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(valorWhey)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nomeWhey)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nomeWhey1))
-                    .addGroup(panelWheyLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(imagemWhey, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(imagemWhey, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(panelWheyLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(valorWhey)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeWhey)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeWhey1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelQuantidade)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quantidadeProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(confirmarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
 
         header.setBackground(new java.awt.Color(47, 40, 65));
@@ -169,6 +216,24 @@ public class ComprarWhey extends javax.swing.JFrame {
         loja.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarButtonActionPerformed
+
+    private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
+        try{
+            int quantidade = Integer.parseInt(quantidadeProdutos.getText());
+            VendasDAO vendas = new VendasDAO();
+            whey.setQuantidade(quantidade);
+            vendas.inserirVenda(whey);
+            Loja loja = new Loja();
+            loja.setVisible(true);
+            this.dispose();
+        }catch(NumberFormatException n){
+            JOptionPane.showMessageDialog(null, "Digite um número");
+        }
+    }//GEN-LAST:event_confirmarButtonActionPerformed
+
+    private void quantidadeProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantidadeProdutosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantidadeProdutosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -462,12 +527,15 @@ public class ComprarWhey extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Tela1;
+    private javax.swing.JButton confirmarButton;
     private javax.swing.JPanel header;
     private javax.swing.JLabel imagemWhey;
+    private javax.swing.JLabel labelQuantidade;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel nomeWhey;
     private javax.swing.JLabel nomeWhey1;
     private javax.swing.JPanel panelWhey;
+    private javax.swing.JTextField quantidadeProdutos;
     private javax.swing.JLabel valorWhey;
     private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables

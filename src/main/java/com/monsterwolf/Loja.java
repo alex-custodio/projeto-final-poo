@@ -8,17 +8,19 @@ import javax.swing.JOptionPane;
 
 
 public class Loja extends javax.swing.JFrame {
-    Produto whey,creatina, pasta;
+    static Produto whey,creatina, pasta;
+    CarrinhoDeComprasDAO objeto = new CarrinhoDeComprasDAO();
+    
     /**
      * Creates new form TelaInicial
      */
     public Loja() {
         initComponents();
-        whey = new Produto(1, "Whey Protein", "Whey Protein Growth é a proteína ideal para quem treina hipertrofia e quer ganhar massa muscular");
-        creatina = new Produto(2, "Creatina", "A Creatina auxilia na manutenção dos níveis de energia durante o treino");
-        pasta = new Produto(3, "Pasta de Amendoim", "O amendoim é um alimento de excelentes propriedades nutricionais; seus grãos contém 26% de proteínas, 46% de óleo, além de sais minerais e um leque de vitaminas e compostos antioxidantes");
+        whey = new Produto( "Whey Protein", "Whey Protein Growth é a proteína ideal para quem treina hipertrofia e quer ganhar massa muscular", 1, "R$99,00");
+        creatina = new Produto( "Creatina", "A Creatina auxilia na manutenção dos níveis de energia durante o treino", 1, "R$45,00");
+        pasta = new Produto( "Pasta de Amendoim", "O amendoim é um alimento de excelentes propriedades nutricionais; seus grãos contém 26% de proteínas, 46% de óleo, além de sais minerais e um leque de vitaminas e compostos antioxidantes", 1, "R$25,00");
+ 
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,18 +35,22 @@ public class Loja extends javax.swing.JFrame {
         imagemWhey = new javax.swing.JLabel();
         valorWhey = new javax.swing.JLabel();
         nomeWhey = new javax.swing.JLabel();
+        adicionarCarrinho1 = new javax.swing.JButton();
         header = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         carrinhoButton = new javax.swing.JButton();
         pedidosButton = new javax.swing.JButton();
+        sairButton = new javax.swing.JButton();
         panelCreatina = new javax.swing.JPanel();
         imagemCreatina = new javax.swing.JLabel();
         valorCreatina = new javax.swing.JLabel();
         nomeCreatina = new javax.swing.JLabel();
+        adicionarCarrinho2 = new javax.swing.JButton();
         panelPasta = new javax.swing.JPanel();
         imagemPasta = new javax.swing.JLabel();
         valorPasta = new javax.swing.JLabel();
         nomePasta = new javax.swing.JLabel();
+        adicionarCarrinho3 = new javax.swing.JButton();
         panelDemo1 = new javax.swing.JPanel();
         panelDemo2 = new javax.swing.JPanel();
         panelDemo3 = new javax.swing.JPanel();
@@ -83,30 +89,46 @@ public class Loja extends javax.swing.JFrame {
         nomeWhey.setForeground(new java.awt.Color(255, 204, 102));
         nomeWhey.setText("Whey Protein");
 
+        adicionarCarrinho1.setBackground(new java.awt.Color(255, 102, 102));
+        adicionarCarrinho1.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        adicionarCarrinho1.setForeground(new java.awt.Color(255, 255, 255));
+        adicionarCarrinho1.setText("+");
+        adicionarCarrinho1.setBorder(null);
+        adicionarCarrinho1.setBorderPainted(false);
+        adicionarCarrinho1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adicionarCarrinho1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelWheyLayout = new javax.swing.GroupLayout(panelWhey);
         panelWhey.setLayout(panelWheyLayout);
         panelWheyLayout.setHorizontalGroup(
             panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelWheyLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(adicionarCarrinho1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(valorWhey)
                 .addGap(61, 61, 61))
-            .addGroup(panelWheyLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWheyLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(nomeWhey)
                     .addComponent(imagemWhey))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
         panelWheyLayout.setVerticalGroup(
             panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelWheyLayout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(nomeWhey)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(imagemWhey)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(valorWhey))
+                .addGroup(panelWheyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valorWhey)
+                    .addComponent(adicionarCarrinho1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         header.setBackground(new java.awt.Color(47, 40, 65));
@@ -139,6 +161,17 @@ public class Loja extends javax.swing.JFrame {
             }
         });
 
+        sairButton.setBackground(new java.awt.Color(119, 255, 192));
+        sairButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        sairButton.setText("Sair");
+        sairButton.setBorder(null);
+        sairButton.setBorderPainted(false);
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
         header.setLayout(headerLayout);
         headerLayout.setHorizontalGroup(
@@ -147,6 +180,8 @@ public class Loja extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(carrinhoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(pedidosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,8 +194,9 @@ public class Loja extends javax.swing.JFrame {
                 .addGroup(headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(logo)
                     .addComponent(carrinhoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pedidosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 9, Short.MAX_VALUE))
+                    .addComponent(pedidosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
         panelCreatina.setBackground(new java.awt.Color(47, 40, 65));
@@ -187,33 +223,53 @@ public class Loja extends javax.swing.JFrame {
         nomeCreatina.setForeground(new java.awt.Color(255, 204, 102));
         nomeCreatina.setText("Creatina");
 
+        adicionarCarrinho2.setBackground(new java.awt.Color(255, 102, 102));
+        adicionarCarrinho2.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        adicionarCarrinho2.setForeground(new java.awt.Color(255, 255, 255));
+        adicionarCarrinho2.setText("+");
+        adicionarCarrinho2.setBorder(null);
+        adicionarCarrinho2.setBorderPainted(false);
+        adicionarCarrinho2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adicionarCarrinho2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelCreatinaLayout = new javax.swing.GroupLayout(panelCreatina);
         panelCreatina.setLayout(panelCreatinaLayout);
         panelCreatinaLayout.setHorizontalGroup(
             panelCreatinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCreatinaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(panelCreatinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
-                        .addComponent(imagemCreatina)
-                        .addGap(34, 34, 34))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
+                        .addComponent(adicionarCarrinho2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                         .addComponent(valorCreatina)
                         .addGap(72, 72, 72))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
-                        .addComponent(nomeCreatina)
-                        .addGap(68, 68, 68))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(panelCreatinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
+                                .addComponent(nomeCreatina)
+                                .addGap(68, 68, 68))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
+                                .addComponent(imagemCreatina)
+                                .addGap(38, 38, 38))))))
         );
         panelCreatinaLayout.setVerticalGroup(
             panelCreatinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCreatinaLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(nomeCreatina)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
                 .addComponent(imagemCreatina)
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(valorCreatina)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCreatinaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(adicionarCarrinho2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         panelPasta.setBackground(new java.awt.Color(47, 40, 65));
@@ -240,32 +296,51 @@ public class Loja extends javax.swing.JFrame {
         nomePasta.setForeground(new java.awt.Color(255, 204, 102));
         nomePasta.setText("Pasta de Amendoim");
 
+        adicionarCarrinho3.setBackground(new java.awt.Color(255, 102, 102));
+        adicionarCarrinho3.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        adicionarCarrinho3.setForeground(new java.awt.Color(255, 255, 255));
+        adicionarCarrinho3.setText("+");
+        adicionarCarrinho3.setBorder(null);
+        adicionarCarrinho3.setBorderPainted(false);
+        adicionarCarrinho3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adicionarCarrinho3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelPastaLayout = new javax.swing.GroupLayout(panelPasta);
         panelPasta.setLayout(panelPastaLayout);
         panelPastaLayout.setHorizontalGroup(
             panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPastaLayout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
-                        .addComponent(imagemPasta)
-                        .addGap(31, 31, 31))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
+                        .addComponent(adicionarCarrinho3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(valorPasta)
                         .addGap(65, 65, 65))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
-                        .addComponent(nomePasta)
-                        .addContainerGap())))
+                        .addGap(0, 3, Short.MAX_VALUE)
+                        .addGroup(panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
+                                .addComponent(imagemPasta)
+                                .addGap(31, 31, 31))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPastaLayout.createSequentialGroup()
+                                .addComponent(nomePasta)
+                                .addContainerGap())))))
         );
         panelPastaLayout.setVerticalGroup(
             panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPastaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(nomePasta)
                 .addGap(18, 18, 18)
                 .addComponent(imagemPasta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(valorPasta))
+                .addGroup(panelPastaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valorPasta)
+                    .addComponent(adicionarCarrinho3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         panelDemo1.setBackground(new java.awt.Color(47, 40, 65));
@@ -280,7 +355,7 @@ public class Loja extends javax.swing.JFrame {
         );
         panelDemo1Layout.setVerticalGroup(
             panelDemo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 38, Short.MAX_VALUE)
+            .addGap(0, 36, Short.MAX_VALUE)
         );
 
         panelDemo2.setBackground(new java.awt.Color(47, 40, 65));
@@ -407,7 +482,7 @@ public class Loja extends javax.swing.JFrame {
                         .addComponent(detalhesCreatina, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(panelCreatina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelDemo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(Tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tela1Layout.createSequentialGroup()
                         .addComponent(comprarPasta, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -457,11 +532,13 @@ public class Loja extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void carrinhoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoButtonActionPerformed
-        // TODO add your handling code here:
+        new Carrinho().setVisible(true);
     }//GEN-LAST:event_carrinhoButtonActionPerformed
 
     private void comprarPastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarPastaActionPerformed
-        // TODO add your handling code here:
+        ComprarPasta comprarPasta = new ComprarPasta();
+        comprarPasta.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_comprarPastaActionPerformed
 
     private void comprarWheyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarWheyActionPerformed
@@ -471,24 +548,45 @@ public class Loja extends javax.swing.JFrame {
     }//GEN-LAST:event_comprarWheyActionPerformed
 
     private void comprarCreatinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarCreatinaActionPerformed
-        // TODO add your handling code here:
+        ComprarCreatina comprarCreatina = new ComprarCreatina();
+        comprarCreatina.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_comprarCreatinaActionPerformed
 
     private void detalhesPastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detalhesPastaActionPerformed
-        JOptionPane.showMessageDialog(null, "Informações:\nid: " + pasta.getId() + "\nNome: " + pasta.getNome() + "\nDescrição: " + pasta.getDescricao());
+        JOptionPane.showMessageDialog(null, "Informações:\nid: " + 3 + "\nNome: " + pasta.getNome() + "\nDescrição: " + pasta.getDescricao());
     }//GEN-LAST:event_detalhesPastaActionPerformed
 
     private void detalhesWheyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detalhesWheyActionPerformed
-        JOptionPane.showMessageDialog(null, "Informações:\nid: " + whey.getId() + "\nNome: " + whey.getNome() + "\nDescrição: " + whey.getDescricao());
+        JOptionPane.showMessageDialog(null, "Informações:\nid: " + 1 + "\nNome: " + whey.getNome() + "\nDescrição: " + whey.getDescricao());
     }//GEN-LAST:event_detalhesWheyActionPerformed
 
     private void detalhesCreatinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detalhesCreatinaActionPerformed
-        JOptionPane.showMessageDialog(null, "Informações:\nid: " + creatina.getId() + "\nNome: " + creatina.getNome() + "\nDescrição: " + creatina.getDescricao());
+        JOptionPane.showMessageDialog(null, "Informações:\nid: " + 2 + "\nNome: " + creatina.getNome() + "\nDescrição: " + creatina.getDescricao());
     }//GEN-LAST:event_detalhesCreatinaActionPerformed
 
     private void pedidosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedidosButtonActionPerformed
-        // TODO add your handling code here:
+        VendasDAO vendas = new VendasDAO();
+        vendas.consultarTudo();
     }//GEN-LAST:event_pedidosButtonActionPerformed
+
+    private void adicionarCarrinho2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCarrinho2ActionPerformed
+        objeto.inserirProduto(new Produto( "Creatina", "A Creatina auxilia na manutenção dos níveis de energia durante o treino", 1, "R$45,00"));
+    }//GEN-LAST:event_adicionarCarrinho2ActionPerformed
+
+    private void adicionarCarrinho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCarrinho1ActionPerformed
+        objeto.inserirProduto(new Produto( "Whey Protein", "Whey Protein Growth é a proteína ideal para quem treina hipertrofia e quer ganhar massa muscular", 1, "R$99,00"));
+    }//GEN-LAST:event_adicionarCarrinho1ActionPerformed
+
+    private void adicionarCarrinho3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCarrinho3ActionPerformed
+        objeto.inserirProduto(new Produto( "Pasta de Amendoim", "O amendoim é um alimento de excelentes propriedades nutricionais; seus grãos contém 26% de proteínas, 46% de óleo, além de sais minerais e um leque de vitaminas e compostos antioxidantes", 1, "R$25,00"));
+    }//GEN-LAST:event_adicionarCarrinho3ActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_sairButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -542,6 +640,9 @@ public class Loja extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Tela1;
+    private javax.swing.JButton adicionarCarrinho1;
+    private javax.swing.JButton adicionarCarrinho2;
+    private javax.swing.JButton adicionarCarrinho3;
     private javax.swing.JButton carrinhoButton;
     private javax.swing.JButton comprarCreatina;
     private javax.swing.JButton comprarPasta;
@@ -564,6 +665,7 @@ public class Loja extends javax.swing.JFrame {
     private javax.swing.JPanel panelPasta;
     private javax.swing.JPanel panelWhey;
     private javax.swing.JButton pedidosButton;
+    private javax.swing.JButton sairButton;
     private javax.swing.JLabel valorCreatina;
     private javax.swing.JLabel valorPasta;
     private javax.swing.JLabel valorWhey;
